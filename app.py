@@ -29,7 +29,7 @@ user_input = st.text_area("Enter a prompt:", "Once upon a time...")
 if st.button("Generate Text"):
     if user_input.strip():
         with st.spinner("Generating..."):
-            output = generator(user_input, max_length=100, num_return_sequences=1)
+            output = generator(user_input, max_length=500, num_return_sequences=1)
             st.subheader("Generated Text:")
             st.write(output[0]['generated_text'])
     else:
